@@ -33,7 +33,7 @@ if [[ $VPN_ENABLED == "yes" ]]; then
 	fi
 	
 	# wildcard search for openvpn config files (match on first result)
-	export VPN_CONFIG=$(find /config/openvpn -maxdepth 1 -name "*.ovpn" -print -quit)
+	export VPN_CONFIG=$(find /config/openvpn/ -maxdepth 1 -name "*.ovpn" -print -quit)
 	
 	# if ovpn file not found in /config/openvpn then exit
 	if [[ -z "${VPN_CONFIG}" ]]; then
